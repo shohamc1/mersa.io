@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.mersa.io",
     title: "mersa.io",
   },
   plugins: [
@@ -14,6 +14,16 @@ module.exports = {
     },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "mersa.io",
+        short_name: "mersa.io",
+        start_url: "/",
+        display: "standalone",
+        icon: "./src/images/mersa_icon.png",
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
