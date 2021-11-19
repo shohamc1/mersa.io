@@ -1,23 +1,24 @@
 @font-face {
-    font-family: "Walkway Expand";
-    src: url("../fonts/Walkway\ Expand\ Bold.ttf");
-    font-weight: bold;
+  font-family: "Walkway Expand";
+  src: url("../fonts/Walkway\ Expand\ Bold.ttf");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "Walkway Expand";
-    src: url("../fonts/Walkway\ Expand\ UltraBold.ttf");
-    font-weight: bolder;
+  font-family: "Walkway Expand";
+  src: url("../fonts/Walkway\ Expand\ UltraBold.ttf");
+  font-weight: bolder;
+  font-weight: 800;
 }
 
 @font-face {
-    font-family: "Walkway Expand";
-    src: url("../fonts/Walkway\ Expand\ SemiBold.ttf");
-    font-weight: normal;
+  font-family: "Walkway Expand";
+  src: url("../fonts/Walkway\ Expand\ SemiBold.ttf");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Walkway Black";
-    src: url("../fonts/Walkway\ Black.ttf");
-    font-weight: normal;
+  font-family: "Walkway Black";
+  src: url("../fonts/Walkway\ Black.ttf");
+  font-weight: normal;
 }

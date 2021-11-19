@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Content */}
         <div class="ml-16 flex flex-col justify-center items-center">
           {/* Left side */}
-          <img src={logo} class="h-8 w-auto" />
+          <img src={logo} class="h-8 w-auto" alt="Logo" />
           <span class="text-white font-header text-base tracking-wider">
             Financing without Fundraising
           </span>

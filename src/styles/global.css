@@ -3,3 +3,37 @@
 @tailwind utilities;
 
 @import url("typography.css");
+
+.thickunderline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.thickunderline::before {
+  content: "";
+  width: 100%;
+  height: 0.125em;
+  background-color: #ff3860;
+  display: block;
+  position: absolute;
+  bottom: 0.1em;
+  z-index: -1;
+}
+
+.thickunderline-small {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.thickunderline-small::before {
+  content: "";
+  width: 100%;
+  height: 0.125em;
+  background-color: #ff3860;
+  display: block;
+  position: absolute;
+  bottom: 0.25em;
+  z-index: -1;
+}

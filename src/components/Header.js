@@ -9,7 +9,7 @@ const Header = () => {
       <div class="flex flex-row">
         {/* Left side */}
         <Link to="/">
-          <img src={logo} class="h-8 w-auto" />
+          <img src={logo} class="h-8 w-auto" alt="Logo" />
         </Link>
       </div>
       <div class="flex flex-row ml-auto space-x-8 justify-center content-center">
