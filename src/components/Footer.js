@@ -4,7 +4,7 @@ import logo from "../images/mersa_no_bg.png";
 
 const Footer = () => {
   return (
-    <div class="mt-4">
+    <div class="mt-4 mb-8">
       <hr />
       <div class="flex mt-4">
         {/* Content */}
