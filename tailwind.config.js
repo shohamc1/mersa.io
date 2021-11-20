@@ -14,6 +14,7 @@ module.exports = {
         companiesRed: "#FF4D4D",
         investorsPurple: "#7928CA",
         faqPink: "#FF0080",
+        signUpOlive: "#013E41",
         connectDarkBlue: "#007CF0",
         connectLightBlue: "#00DFD8",
         selectPurple: "#7928CA",
