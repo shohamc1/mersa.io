@@ -13,6 +13,7 @@ module.exports = {
         landingBlue: "#007FFF",
         companiesRed: "#FF4D4D",
         investorsPurple: "#7928CA",
+        faqPink: "#FF0080",
         connectDarkBlue: "#007CF0",
         connectLightBlue: "#00DFD8",
         selectPurple: "#7928CA",
@@ -25,6 +26,9 @@ module.exports = {
         turquoise: "#4CA1AF",
         paleYellow: "#FF9966",
         paleOrange: "#FF5E62",
+      },
+      transitionProperty: {
+        height: "height",
       },
     },
     letterSpacing: {

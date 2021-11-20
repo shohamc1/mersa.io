@@ -20,6 +20,9 @@ const Header = () => {
         <a href="/investors" class="my-auto no-underline">
           <div class="text-white text-lg my-auto">For Investors</div>
         </a>
+        <a href="/faq" class="my-auto no-underline">
+          <div class="text-white text-lg my-auto">FAQs</div>
+        </a>
         <Link to="/signup">
           <div class="bg-white px-4 py-2 rounded-lg">Get Started</div>
         </Link>

@@ -47,9 +47,15 @@ const Footer = () => {
             {/* Products */}
             <span class="font-bold">Products</span>
 
-            <span class="mt-1 font-light">For companies</span>
-            <span class="font-light">For investors</span>
-            <span class="font-light">FAQs</span>
+            <a href="/companies">
+              <span class="mt-1 font-light">For companies</span>
+            </a>
+            <a href="/investors">
+              <span class="font-light">For investors</span>
+            </a>
+            <a href="/faq">
+              <span class="font-light">FAQs</span>
+            </a>
           </div>
 
           <div class="flex flex-col">
