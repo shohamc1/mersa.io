@@ -12,6 +12,7 @@ module.exports = {
         backgroundGray: "#1C1C1C",
         landingBlue: "#007FFF",
         companiesRed: "#FF4D4D",
+        investorsPurple: "#7928CA",
         connectDarkBlue: "#007CF0",
         connectLightBlue: "#00DFD8",
         selectPurple: "#7928CA",
@@ -20,6 +21,8 @@ module.exports = {
         collectYellow: "#F9CB28",
         borderGreen: "#48C774",
         buttonGray: "#131313",
+        paleBlue: "#C4E0E5",
+        turquoise: "#4CA1AF",
       },
     },
     letterSpacing: {
