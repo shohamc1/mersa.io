@@ -23,6 +23,8 @@ module.exports = {
         buttonGray: "#131313",
         paleBlue: "#C4E0E5",
         turquoise: "#4CA1AF",
+        paleYellow: "#FF9966",
+        paleOrange: "#FF5E62",
       },
     },
     letterSpacing: {
