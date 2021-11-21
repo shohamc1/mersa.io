@@ -112,7 +112,7 @@ const SignUpPage = () => {
           <span class="font-light text-sm text-lightWhite">Country</span>
           <Listbox value={selectedCountry} onChange={setSelectedCountry}>
             <div className="relative mt-1">
-              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left border-2 border-black bg-backgroundGray rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left border-2 border-black bg-backgroundGray rounded-md">
                 <span className="block truncate">{selectedCountry.value}</span>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                   <SelectorIcon
@@ -191,7 +191,7 @@ const SignUpPage = () => {
             onChange={setSelectedAccountType}
           >
             <div className="relative mt-1">
-              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left border-2 border-black bg-backgroundGray rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left border-2 border-black bg-backgroundGray rounded-md">
                 <span className="block truncate">
                   {selectedAccountType.value}
                 </span>
@@ -271,7 +271,7 @@ const SignUpPage = () => {
         )}
 
         <button
-          class="flex flex-row space-x-2 justify-center items-center bg-white rounded-md py-2 mt-8"
+          class="flex flex-row space-x-2 justify-center items-center bg-white rounded-md py-2"
           onClick={submit}
         >
           <span class="font-subheader text-2xl text-black">Sign Up</span>
