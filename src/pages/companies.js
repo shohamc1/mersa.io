@@ -7,11 +7,11 @@ import CompaniesPage from "../components/companies/CompaniesPage";
 
 const Companies = () => {
   return (
-    <div class="flex w-screen h-full justify-center bg-backgroundGray">
+    <div class="flex w-full h-full justify-center bg-backgroundGray">
       <Helmet>
         <title>For companies | mersa.io</title>
       </Helmet>
-      <div class="absolute top-0 left-0 h-full w-screen opacity-30 bg-gradient-to-b from-companiesRed to-backgroundGray"></div>
+      <div class="absolute top-0 left-0 h-full w-full opacity-30 bg-gradient-to-b from-companiesRed to-backgroundGray"></div>
       <main class="w-3/4 z-10">
         <Header />
         <CompaniesPage />

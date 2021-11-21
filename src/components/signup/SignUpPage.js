@@ -252,7 +252,7 @@ const SignUpPage = () => {
           </Listbox>
         </div>
 
-        {selectedAccountType.id == "co" ? (
+        {selectedAccountType.id === "co" ? (
           <div class="flex flex-col">
             {/* Row 7 (hidden by default) */}
             <span class="font-light text-sm text-lightWhite">
