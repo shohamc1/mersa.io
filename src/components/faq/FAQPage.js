@@ -13,7 +13,7 @@ const FAQPage = () => {
       <div class="mb-4">
         <span
           class={`cursor-pointer font-header text-4xl border-r px-2 ${
-            active != "company" ? "text-gray-300" : "text-white"
+            active !== "company" ? "text-gray-300" : "text-white"
           }`}
           onClick={(e) => {
             e.preventDefault();
@@ -24,7 +24,7 @@ const FAQPage = () => {
         </span>
         <span
           class={`cursor-pointer font-header text-4xl px-2 ${
-            active != "investor" ? "text-gray-300" : "text-white"
+            active !== "investor" ? "text-gray-300" : "text-white"
           }`}
           onClick={(e) => {
             e.preventDefault();
@@ -34,7 +34,7 @@ const FAQPage = () => {
           For investors
         </span>
       </div>
-      {active == "company" ? (
+      {active === "company" ? (
         <>
           <QABox question="Question 1" answer="Hello1" first />
           <QABox question="Question 2" answer="Hello2" />

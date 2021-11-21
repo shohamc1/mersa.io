@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SignUpPage from "../components/signup/SignUpPage";
 
 const SignUp = () => {
   return (
@@ -13,6 +14,7 @@ const SignUp = () => {
       <div class="absolute top-0 left-0 h-full w-screen min-h-screen opacity-30 bg-gradient-to-b from-signUpOlive to-backgroundGray"></div>
       <main class="w-3/4 z-10">
         <Header />
+        <SignUpPage />
         <Footer />
       </main>
     </div>

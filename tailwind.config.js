@@ -27,6 +27,7 @@ module.exports = {
         turquoise: "#4CA1AF",
         paleYellow: "#FF9966",
         paleOrange: "#FF5E62",
+        lightWhite: "#FAFAFA",
       },
       transitionProperty: {
         height: "height",

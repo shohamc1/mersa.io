@@ -5,7 +5,7 @@ import logo from "../images/mersa_no_bg.png";
 
 const Header = () => {
   return (
-    <div class="flex flex-row rounded font-subheader mt-2 items-center">
+    <div class="sticky top-0 z-20 flex flex-row font-subheader py-2 items-center backdrop-filter backdrop-blur">
       <div class="flex flex-row">
         {/* Left side */}
         <Link to="/">
