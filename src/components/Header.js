@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+// import { Link } from "@reach/router";
 
 import logo from "../images/mersa_no_bg.png";
 
@@ -14,14 +15,23 @@ const Header = () => {
       </div>
       <div class="flex flex-row ml-auto space-x-8 justify-center content-center">
         {/* Right side */}
-        <Link to="/companies" class="my-auto items-center no-underline">
-          <div class="text-white text-lg my-auto">For Companies</div>
+        <Link
+          to="/companies"
+          className="my-auto items-center no-underline text-white text-lg"
+        >
+          For Companies
         </Link>
-        <Link to="/investors" class="my-auto no-underline">
-          <div class="text-white text-lg my-auto">For Investors</div>
+        <Link
+          to="/investors"
+          className="my-auto items-center no-underline text-white text-lg"
+        >
+          For Investors
         </Link>
-        <Link to="/faq" class="my-auto no-underline">
-          <div class="text-white text-lg my-auto">FAQs</div>
+        <Link
+          to="/faq"
+          className="my-auto items-center no-underline text-white text-lg"
+        >
+          FAQs
         </Link>
         <Link to="/signup">
           <div class="bg-white px-4 py-2 rounded-lg">Get Started</div>
