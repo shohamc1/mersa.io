@@ -7,9 +7,12 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "asdsadasdsa",
+        trackingIds: ["UA-213333879-1"],
+      },
+      pluginConfig: {
+        respectDNT: true,
       },
     },
     "gatsby-plugin-sitemap",
