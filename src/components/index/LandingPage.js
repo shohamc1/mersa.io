@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const LandingPage = () => {
   return (
@@ -36,11 +37,11 @@ const LandingPage = () => {
       </div>
 
       <div class="mb-4 grid grid-flow-col grid-cols-2 space-x-4">
-        <a href="/">
+        <Link to="/signup">
           <div class="py-8 px-12 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center">
             Sign Up for Early Access
           </div>
-        </a>
+        </Link>
 
         <a href="/">
           <div class="py-8 px-12 bg-buttonGray text-white font-subheader font-extrabold text-2xl rounded-lg text-center">
@@ -108,7 +109,7 @@ const LandingPage = () => {
       </span>
 
       <div class="mb-4 grid grid-flow-col grid-cols-2 space-x-4">
-        <a href="/">
+        <Link to="/companies">
           <div class="py-8 px-12 bg-buttonGray text-white font-subheader text-2xl rounded-lg text-center">
             <svg
               width="94"
@@ -124,9 +125,9 @@ const LandingPage = () => {
             </svg>
             Companies
           </div>
-        </a>
+        </Link>
 
-        <a href="/">
+        <Link to="/investors">
           <div class="py-8 px-12 bg-buttonGray text-white font-subheader text-2xl rounded-lg text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,15 +141,19 @@ const LandingPage = () => {
             </svg>
             Investors
           </div>
-        </a>
+        </Link>
       </div>
 
       <span class="my-4 font-header text-5xl text-center tracking-wider">
         Ready to get funded?
       </span>
-      <div class="my-4 w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center">
-        Sign Up for Early Access
-      </div>
+
+      <Link
+        to="/signup"
+        class="my-4 w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center"
+      >
+        <div>Sign Up for Early Access</div>
+      </Link>
     </div>
   );
 };

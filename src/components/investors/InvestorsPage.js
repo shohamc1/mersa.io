@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const InvestorsPage = () => {
   return (
@@ -96,9 +97,12 @@ const InvestorsPage = () => {
       <span class="my-4 font-header text-5xl text-center tracking-wider">
         Diversify the way you invest.
       </span>
-      <div class="my-4 w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center">
-        Sign Up for Early Access
-      </div>
+      <Link
+        to="/signup"
+        class="my-4 w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center"
+      >
+        <div>Sign Up for Early Access</div>
+      </Link>
     </div>
   );
 };

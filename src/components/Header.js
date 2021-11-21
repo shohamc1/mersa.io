@@ -14,15 +14,15 @@ const Header = () => {
       </div>
       <div class="flex flex-row ml-auto space-x-8 justify-center content-center">
         {/* Right side */}
-        <a href="/companies" class="my-auto items-center no-underline">
+        <Link to="/companies" class="my-auto items-center no-underline">
           <div class="text-white text-lg my-auto">For Companies</div>
-        </a>
-        <a href="/investors" class="my-auto no-underline">
+        </Link>
+        <Link to="/investors" class="my-auto no-underline">
           <div class="text-white text-lg my-auto">For Investors</div>
-        </a>
-        <a href="/faq" class="my-auto no-underline">
+        </Link>
+        <Link to="/faq" class="my-auto no-underline">
           <div class="text-white text-lg my-auto">FAQs</div>
-        </a>
+        </Link>
         <Link to="/signup">
           <div class="bg-white px-4 py-2 rounded-lg">Get Started</div>
         </Link>
