@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+const axios = require("axios").default;
 
 const countries = [
   { id: "0", value: "Select a country" },
@@ -27,6 +28,18 @@ const SignUpPage = () => {
   const [refCode, setRefCode] = useState("");
   const [mrr, setMRR] = useState("");
 
+  const [firstNameError, setFirstNameError] = useState(false);
+  const [lastNameError, setLastNameError] = useState(false);
+  const [workEmailError, setWorkEmailError] = useState(false);
+  const [linkedinError, setLinkedinError] = useState(false);
+  const [countriesError, setCountriesError] = useState(false);
+  const [accTypeError, setAccTypeError] = useState(false);
+  const [refCodeError, setRefCodeError] = useState(false);
+  const [mrrError, setMRRError] = useState(false);
+  const [formError, setFormError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const checkUrlFunction = () => {
     if (typeof window !== "undefined") {
       const queryString = window.location.search;
@@ -36,15 +49,78 @@ const SignUpPage = () => {
   };
 
   const submit = () => {
-    console.log(firstName);
-    console.log(lastName);
-    console.log(workEmail);
-    console.log(linkedin);
-    console.log(refCode);
-    console.log(selectedCountry);
-    console.log(selectedAccountType);
-    console.log(mrr);
+    setLoading(true);
+    setFormError(false);
+
+    validateInputs();
+
+    if (
+      firstNameError ||
+      lastNameError ||
+      workEmailError ||
+      linkedinError ||
+      countriesError ||
+      accTypeError ||
+      refCodeError ||
+      mrrError
+    ) {
+      setLoading(false);
+      return;
+    }
+
+    axios
+      .post(
+        "https://us-central1-mersa-332807.cloudfunctions.net/registerUser",
+        {
+          firstName: firstName,
+          lastName: lastName,
+          workEmail: workEmail,
+          country: selectedCountry.value,
+          refCode: refCode,
+          accType: selectedAccountType.value,
+          mrr: mrr,
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        if (res.status !== 200) {
+          setFormError(res.data);
+          setLoading(false);
+        } else {
+          setSuccess(res.data.userCode);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        setFormError("User already exists.");
+      });
   };
+
+  const validateInputs = () => {
+    setFirstNameError(firstName ? false : true);
+    setLastNameError(lastName ? false : true);
+    setWorkEmailError(workEmail && validateEmail(workEmail) ? false : true);
+    setLinkedinError(linkedin && validateLinkedIn(linkedin) ? false : true);
+    setRefCodeError(refCode && validateRefCode(refCode) ? false : true);
+    setCountriesError(selectedCountry.id !== "0" ? false : true);
+    setAccTypeError(selectedAccountType.id !== "0" ? false : true);
+    setMRRError(mrr && mrr > 0 ? false : true);
+  };
+
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function validateLinkedIn(linkedin) {
+    const re = /^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\/(pub|in|profile)/;
+    return re.test(String(linkedin).toLowerCase());
+  }
+
+  function validateRefCode(refCode) {
+    return refCode.length === 10 || refCode.length === 0 ? true : false;
+  }
 
   useEffect(() => {
     checkUrlFunction();
@@ -68,6 +144,13 @@ const SignUpPage = () => {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
+            {firstNameError ? (
+              <span class="text-xs text-red-500 pt-1 px-1">
+                Please enter your first name
+              </span>
+            ) : (
+              <></>
+            )}
           </div>
           <div class="flex flex-col">
             <span class="font-light text-sm text-lightWhite">Last Name</span>
@@ -78,6 +161,13 @@ const SignUpPage = () => {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
+            {lastNameError ? (
+              <span class="text-xs text-red-500 pt-1 px-1">
+                Please enter your last name
+              </span>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
 
@@ -91,6 +181,13 @@ const SignUpPage = () => {
             value={workEmail}
             onChange={(e) => setWorkEmail(e.target.value)}
           />
+          {workEmailError ? (
+            <span class="text-xs text-red-500 pt-1 px-1">
+              Please enter a valid email
+            </span>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div class="flex flex-col">
@@ -105,6 +202,13 @@ const SignUpPage = () => {
             value={linkedin}
             onChange={(e) => setLinkedin(e.target.value)}
           />
+          {linkedinError ? (
+            <span class="text-xs text-red-500 pt-1 px-1">
+              Please enter a LinkedIn profile
+            </span>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div class="flex flex-col">
@@ -169,6 +273,11 @@ const SignUpPage = () => {
               </Transition>
             </div>
           </Listbox>
+          {countriesError ? (
+            <span class="text-xs text-red-500 pt-1 px-1">Select a country</span>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div class="flex flex-col">
@@ -181,6 +290,13 @@ const SignUpPage = () => {
             value={refCode}
             onChange={(e) => setRefCode(e.target.value)}
           />
+          {refCodeError ? (
+            <span class="text-xs text-red-500 pt-1 px-1">
+              Please enter a valid referral code
+            </span>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div class="flex flex-col">
@@ -250,6 +366,13 @@ const SignUpPage = () => {
               </Transition>
             </div>
           </Listbox>
+          {accTypeError ? (
+            <span class="text-xs text-red-500 pt-1 px-1">
+              Select an account type
+            </span>
+          ) : (
+            <></>
+          )}
         </div>
 
         {selectedAccountType.id === "co" ? (
@@ -265,6 +388,13 @@ const SignUpPage = () => {
               value={mrr}
               onChange={(e) => setMRR(e.target.value)}
             />
+            {mrrError ? (
+              <span class="text-xs text-red-500 pt-1 px-1">
+                Please enter a valid MRR value
+              </span>
+            ) : (
+              <></>
+            )}
           </div>
         ) : (
           <></>
@@ -274,18 +404,42 @@ const SignUpPage = () => {
           class="flex flex-row space-x-2 justify-center items-center bg-white rounded-md py-2"
           onClick={submit}
         >
-          <span class="font-subheader text-2xl text-black">Sign Up</span>
-          <svg
-            width="28"
-            height="28"
-            xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-          </svg>
+          {loading ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="animate-spin"
+            >
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm8 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-19 0c0-6.065 4.935-11 11-11v2c-4.962 0-9 4.038-9 9 0 2.481 1.009 4.731 2.639 6.361l-1.414 1.414.015.014c-2-1.994-3.24-4.749-3.24-7.789z" />
+            </svg>
+          ) : (
+            <>
+              <span class="font-subheader text-2xl text-black">Sign Up</span>
+              <svg
+                width="28"
+                height="28"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                viewBox="0 0 24 24"
+              >
+                <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+              </svg>
+            </>
+          )}
         </button>
+
+        {formError ? (
+          <div class="flex flex-row space-x-2 justify-center items-center border-2 border-red-500 rounded-md py-2 font-light text-lg">
+            {formError}
+          </div>
+        ) : (
+          <></>
+        )}
+
+        {success ? <div>{success}</div> : <></>}
       </div>
     </div>
   );
