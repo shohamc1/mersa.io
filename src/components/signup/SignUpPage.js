@@ -70,24 +70,25 @@ const SignUpPage = () => {
 
     axios
       .post(
-        "https://us-central1-mersa-332807.cloudfunctions.net/registerUser",
+        "https://1m5qokqwx5.execute-api.ap-southeast-1.amazonaws.com/default/rdsTest-dev-hello",
         {
           firstName: firstName,
           lastName: lastName,
           workEmail: workEmail,
+          linkedin: linkedin,
           country: selectedCountry.value,
           refCode: refCode,
           accType: selectedAccountType.value,
-          mrr: mrr,
+          mrr: mrr ? mrr : "0",
         }
       )
       .then((res) => {
         console.log(res);
-        if (res.status !== 200) {
+        if (res.data["error"]) {
           setFormError(res.data);
           setLoading(false);
         } else {
-          setSuccess(res.data.userCode);
+          setSuccess(res.data.refCode);
           setLoading(false);
         }
       })
@@ -109,7 +110,8 @@ const SignUpPage = () => {
   };
 
   function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
 
@@ -125,6 +127,73 @@ const SignUpPage = () => {
   useEffect(() => {
     checkUrlFunction();
   }, []);
+
+  if (success) {
+    return (
+      <div class="flex flex-col justify-center items-center text-white mt-4">
+        <div class="text-5xl font-header tracking-wider mb-8">
+          You're all set!
+        </div>
+
+        <div class="flex flex-col backdrop-blur-100 bg-white bg-opacity-10 p-8 rounded-xl space-y-4 items-center justify-center">
+          <span class="text-2xl text-center">Your referral code is</span>
+          <div class="flex flex-row font-header px-4 py-2 bg-gray-800 text-white backdrop-blur-100 bg-opacity-50 text-2xl text-center rounded-md tracking-wider mx-8">
+            {success ? success : "ABCABCABC1"}
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="white"
+              class="ml-4 self-center cursor-pointer"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `mersa.io/signup?refCode=${success ? success : "ABCABCABC1"}`
+                );
+              }}
+            >
+              <path d="M17 7h6v16h-16v-6h-6v-16h16v6zm5 1h-14v14h14v-14zm-6-1v-5h-14v14h5v-9h9z" />
+            </svg>
+          </div>
+
+          <span class="text-lg font-light mt-4">
+            Share your code to move up the queue.
+          </span>
+          <div class="flex flex-row items-center justify-center space-x-4">
+            <a
+              class="twitter-share-button self-center"
+              href={`https://twitter.com/intent/tweet?url=mersa.io%2Fsignup%3Frefcode%3D${success}&text=Just%20signed%20up%20for%20early%20access%20at%20mersa.io!&via=mersaio&hashtags=`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="white"
+              >
+                <path d="M0 0v24h24v-24h-24zm18.862 9.237c.208 4.617-3.235 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.079-4.03 3.198-4.03.944 0 1.797.398 2.396 1.037.748-.147 1.451-.42 2.085-.796-.245.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.44.656-.997 1.234-1.638 1.697z" />
+              </svg>
+            </a>
+            <a
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=mersa.io%2Fsignup%3Frefcode%3D${success}&title=&summary=&source=`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="white"
+              >
+                <path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
