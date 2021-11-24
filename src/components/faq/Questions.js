@@ -1,11 +1,8 @@
 export const companyQuestions = [
   {
     question: "How does Mersa work?",
-    answer: `1) Connect. Connect your existing subscription management, payment and accounting software to our platform. You will be assigned a trading limit, which is usually a % of your current revenue.
-  2) Select. Next, you will see a list of all your contracts that are eligible to be sold to investors. Select the ones you would like to sell to investors. 
-  3) Collect. Receive anywhere between 1-3 years of upfront payment for each contract. 
-  
-  All under 24 hours.`,
+    answer:
+      "You can get set up and start receiving upfront capital for your contracts with just 3 steps, in under 24 hours. First, connect your existing subscription management, payment and accounting software to our platform. You will be assigned a trading limit, which is usually a % of your current revenue. Next, you will see a list of all your contracts that are eligible to be sold to investors. Select the ones you would like to sell to investors. Receive bids for your contracts and get anywhere between 1-3 years of upfront payment for each contract.",
   },
   {
     question: "What is a trading limit and how do I increase it?",
@@ -46,13 +43,8 @@ export const companyQuestions = [
 export const investorQuestions = [
   {
     question: "How does mersa work for investors?",
-    answer: `1) Connect. Connect your bank account to Mersa's platform. It's just like any other brokerage account. Go through a simple KYC process, and get approval to trade within 1 week. 
-
-  2) Select. On our platform, you can select the companies' whose contracts you can purchase. Place a competitive bid and receive notification of whether your bid is successful. 
-  
-  3) Collect. Receive monthly payouts from each contract you purchased. We'll make sure the monthly payouts hit your bank account. It's that simple. 
-  
-   There's no extra work needed from you.`,
+    answer:
+      "You can get set up and start purchasing recurring revenue contracts with just 3 steps. First, connect your bank account to Mersa's platform. It's just like any other brokerage account. Go through a simple KYC process, and get approval to trade within 1 week.  Once approved, you can select the companies' whose contracts you want to purchase on our platform. Place a competitive bid and receive notification of whether your bid is successful. You will receive monthly payouts from each contract you purchased. We'll make sure the monthly payouts hit your bank account. It's that simple. There's no extra work needed from you.",
   },
   {
     question: "Who can trade on mersa?",
