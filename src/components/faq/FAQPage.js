@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import QABox from "./QABox";
 
+import { companyQuestions, investorQuestions } from "./Questions.js";
+
 const FAQPage = () => {
   const [active, setActive] = useState("company");
 
@@ -36,13 +38,23 @@ const FAQPage = () => {
       </div>
       {active === "company" ? (
         <>
-          <QABox question="Question 1" answer="Hello1" first />
-          <QABox question="Question 2" answer="Hello2" />
+          {companyQuestions.map((item, idx) => (
+            <QABox
+              question={item.question}
+              answer={item.answer}
+              first={idx === 0}
+            />
+          ))}
         </>
       ) : (
         <>
-          <QABox question="Question Investor 1" answer="Hello1" first />
-          <QABox question="Question Investor 2" answer="Hello2" />
+          {investorQuestions.map((item, idx) => (
+            <QABox
+              question={item.question}
+              answer={item.answer}
+              first={idx === 0}
+            />
+          ))}
         </>
       )}
     </div>
