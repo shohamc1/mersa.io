@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div class="mt-4 mb-8">
       <hr />
-      <div class="flex mt-4">
+      <div class="flex flex-col lg:flex-row mt-4">
         {/* Content */}
-        <div class="ml-16 flex flex-col justify-center items-center">
+        <div class="mb-4 lg:mb-0 lg:ml-16 flex flex-col justify-center items-center">
           {/* Left side */}
           <img src={logo} class="h-8 w-auto" alt="Logo" />
           <span class="text-white font-header text-base tracking-wider">
