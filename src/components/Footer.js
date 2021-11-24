@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="ml-auto mr-16 flex flex-row text-white space-x-16">
+        <div class="mx-auto lg:ml-auto lg:mr-16 flex flex-row text-white space-x-16">
           {/* Right side */}
           <div class="flex flex-col">
             {/* Products */}
