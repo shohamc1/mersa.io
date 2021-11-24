@@ -4,69 +4,74 @@ import { Link } from "gatsby";
 const LandingPage = () => {
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
-      <div class="text-7xl font-header tracking-wider">
-        Financing <span class="thickunderline">without Fundraising</span>
+      <div class="text-5xl text-center lg:text-7xl font-header tracking-wider">
+        Financing{" "}
+        <span class="w-min md:w-max lg:w-max thickunderline">
+          without Fundraising
+        </span>
       </div>
-      <span class="font-subheader text-4xl text-center">
+      <span class="font-subheader text-xl lg:text-4xl text-center">
         Turn your recurring revenue into growth financing
       </span>
-      <span class="font-subheader text-4xl text-center">
+      <span class="font-subheader text-xl lg:text-4xl text-center">
         with three easy steps
       </span>
 
-      <div class="flex flex-col my-2 space-y-2">
-        <span class="font-extrabold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
+      <div class="flex flex-col my-2 space-y-2 text-center">
+        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
           Connect.
         </span>
-        <span class="font-extrabold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
+        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
           Select.
         </span>
-        <span class="font-extrabold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
+        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
           Collect.
         </span>
       </div>
 
-      <span class="font-header text-2xl text-center tracking-wide">
+      <span class="font-header text-xl lg:text-2xl text-center tracking-wide">
         Mersa allows you to turn your predictable recurring revenues into years
         of upfront capital in less than 24 hours.
       </span>
 
-      <span class="text-2xl thickunderline-small">No dilution. No debt.</span>
+      <span class="text-xl lg:text-2xl thickunderline-small">
+        No dilution. No debt.
+      </span>
       <div class="my-4 px-4 py-2 border-4 border-borderGreen rounded-md">
         Instant Financing.
       </div>
 
-      <div class="mb-4 grid grid-flow-col grid-cols-2 space-x-4">
+      <div class="mb-4 grid grid-flow-row lg:grid-flow-col grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4">
         <Link to="/signup">
-          <div class="py-8 px-12 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center">
+          <div class="py-4 px-2 lg:py-8 lg:px-12 bg-white text-black font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
             Sign Up for Early Access
           </div>
         </Link>
 
         <a href="/">
-          <div class="py-8 px-12 bg-buttonGray text-white font-subheader font-extrabold text-2xl rounded-lg text-center">
+          <div class="py-4 px-2 lg:py-8 lg:px-12 bg-buttonGray text-white font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
             Contact Us
           </div>
         </a>
       </div>
 
-      <span class="font-header text-2xl text-center tracking-wider">
+      <span class="font-header text-xl lg:text-2xl text-center tracking-wider">
         Mersa empowers founders to grow their businesses with their revenues.
       </span>
-      <span class="font-header text-2xl text-center tracking-wider">
+      <span class="font-header text-xl lg:text-2xl text-center tracking-wider">
         Retain a larger share of your company at exit.
       </span>
 
       {/* Connect */}
-      <div class="mt-4 font-header bg-gradient-to-r from-connectDarkBlue to-connectLightBlue w-16 h-16 flex items-center justify-center rounded-full text-4xl">
+      <div class="mt-4 font-header bg-gradient-to-r from-connectDarkBlue to-connectLightBlue w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
         1
       </div>
-      <span class="font-extrabold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
+      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
         Connect.
       </span>
 
-      <div class="my-4 grid grid-flow-row grid-cols-2 space-x-4">
-        <div class="text-2xl p-12">
+      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
+        <div class="text-2xl p-4 lg:p-12">
           Connect your existing systems to Mersa. It only takes <b>5 minutes</b>
           .
         </div>
@@ -74,46 +79,46 @@ const LandingPage = () => {
       </div>
 
       {/* Select */}
-      <div class="mt-4 font-header bg-gradient-to-r from-selectPurple to-selectRed w-16 h-16 flex items-center justify-center rounded-full text-4xl">
+      <div class="mt-4 font-header bg-gradient-to-r from-selectPurple to-selectRed w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
         2
       </div>
-      <span class="font-extrabold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
+      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
         Select.
       </span>
 
-      <div class="my-4 grid grid-flow-row grid-cols-2 space-x-4">
+      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
         <div class="bg-white">Image</div>
-        <div class="text-2xl p-12">
+        <div class="col-start-1 lg:col-start-auto text-2xl p-4 lg:p-12">
           Select the contracts you would like to sell as bonds to investors.
         </div>
       </div>
 
       {/* Collect */}
-      <div class="mt-4 font-header bg-gradient-to-r from-collectOrange to-collectYellow w-16 h-16 flex items-center justify-center rounded-full text-4xl">
+      <div class="mt-4 font-header bg-gradient-to-r from-collectOrange to-collectYellow w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full  text-2xl lg:text-4xl">
         3
       </div>
-      <span class="font-extrabold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
+      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
         Collect.
       </span>
 
-      <div class="my-4 grid grid-flow-row grid-cols-2 space-x-4">
-        <div class="text-2xl p-12">
+      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
+        <div class="text-2xl p-4 lg:p-12">
           Collect your upfront capital. It's as if each contract paid you
           upfront for 1-3 years worth of subscriptions.
         </div>
         <div class="bg-white">Image</div>
       </div>
 
-      <span class="my-4 font-header text-5xl text-center tracking-wider">
+      <span class="my-4 font-header text-3xl lg:text-5xl text-center tracking-wider">
         Learn More
       </span>
 
-      <div class="mb-4 grid grid-flow-col grid-cols-2 space-x-4">
+      <div class="mb-4 grid grid-flow-row lg:grid-flow-col grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-2 lg:space-y-0 lg:space-x-4">
         <Link to="/companies">
           <div class="py-8 px-12 bg-buttonGray text-white font-subheader text-2xl rounded-lg text-center">
             <svg
-              width="94"
-              height="94"
+              width="64"
+              height="64"
               fill="white"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -131,8 +136,8 @@ const LandingPage = () => {
           <div class="py-8 px-12 bg-buttonGray text-white font-subheader text-2xl rounded-lg text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="94"
-              height="94"
+              width="64"
+              height="64"
               fill="white"
               viewBox="0 0 24 24"
               class="mx-auto"
@@ -144,13 +149,13 @@ const LandingPage = () => {
         </Link>
       </div>
 
-      <span class="my-4 font-header text-5xl text-center tracking-wider">
+      <span class="my-4 font-header text-4xl lg:text-5xl text-center tracking-wider">
         Ready to get funded?
       </span>
 
       <Link
         to="/signup"
-        class="my-4 w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center"
+        class="lg:my-4 lg:w-3/5 py-8 bg-white text-black font-subheader font-extrabold text-2xl rounded-lg text-center"
       >
         <div>Sign Up for Early Access</div>
       </Link>

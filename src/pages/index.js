@@ -12,7 +12,7 @@ const Index = () => {
         <title>mersa.io</title>
       </Helmet>
       <div class="absolute top-0 left-0 w-full h-full opacity-30 bg-gradient-to-b from-landingBlue to-backgroundGray"></div>
-      <main class="w-3/4 z-10">
+      <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">
         <Header />
         <LandingPage />
         <Footer />
