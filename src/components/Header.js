@@ -34,7 +34,9 @@ const Header = () => {
           FAQs
         </Link>
         <Link to="/signup">
-          <div class="bg-white px-4 py-2 rounded-lg">Get Started</div>
+          <div class="bg-white px-4 py-2 rounded-lg font-extrabold">
+            Get Started
+          </div>
         </Link>
       </div>
     </div>
