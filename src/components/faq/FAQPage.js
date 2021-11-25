@@ -8,14 +8,14 @@ const FAQPage = () => {
 
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
-      <div class="text-7xl font-header tracking-wider mb-8">
+      <div class="text-5xl lg:text-7xl font-header tracking-wider text-center mb-4 lg:mb-8">
         Learn how <span class="font-subheader">mersa</span> works
       </div>
 
       <div class="mb-4">
         <span
-          class={`cursor-pointer font-header text-4xl border-r px-2 ${
-            active !== "company" ? "text-gray-300" : "text-white"
+          class={`cursor-pointer font-header text-xl lg:text-4xl border-r px-2 ${
+            active !== "company" ? "text-gray-300" : "text-white underline"
           }`}
           onClick={(e) => {
             e.preventDefault();
@@ -25,8 +25,8 @@ const FAQPage = () => {
           For companies
         </span>
         <span
-          class={`cursor-pointer font-header text-4xl px-2 ${
-            active !== "investor" ? "text-gray-300" : "text-white"
+          class={`cursor-pointer font-header text-xl lg:text-4xl px-2 ${
+            active !== "investor" ? "text-gray-300" : "text-white underline"
           }`}
           onClick={(e) => {
             e.preventDefault();

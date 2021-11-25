@@ -43,9 +43,9 @@ const QABox = ({ question, answer, first }) => {
           </svg>
         )}
         <div class="flex flex-col">
-          <span class="text-2xl font-semibold">{question}</span>
+          <span class="text-lg lg:text-2xl font-semibold">{question}</span>
           {visible ? (
-            <span class="mt-1 text-xl font-light">{answer}</span>
+            <span class="mt-1 lg:text-xl font-light">{answer}</span>
           ) : (
             <></>
           )}
