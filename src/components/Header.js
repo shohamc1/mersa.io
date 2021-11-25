@@ -86,7 +86,7 @@ const Header = () => {
               </div>
               <div className="px-1 py-1">
                 <Menu.Item>
-                  <Link to="/faq">
+                  <Link to="/signup">
                     <button className="text-white group flex rounded-md items-center w-full px-2 py-2 text-sm font-extrabold tracking-wide">
                       Get Started
                     </button>

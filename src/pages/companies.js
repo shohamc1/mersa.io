@@ -12,7 +12,7 @@ const Companies = () => {
         <title>For companies | mersa.io</title>
       </Helmet>
       <div class="absolute top-0 left-0 h-full w-full opacity-30 bg-gradient-to-b from-companiesRed to-backgroundGray"></div>
-      <main class="w-3/4 z-10">
+      <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">
         <Header />
         <CompaniesPage />
         <Footer />
