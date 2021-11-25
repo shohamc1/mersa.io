@@ -52,18 +52,7 @@ const SignUpPage = () => {
     setLoading(true);
     setFormError(false);
 
-    validateInputs();
-
-    if (
-      firstNameError ||
-      lastNameError ||
-      workEmailError ||
-      linkedinError ||
-      countriesError ||
-      accTypeError ||
-      refCodeError ||
-      mrrError
-    ) {
+    if (validateInputs()) {
       setLoading(false);
       return;
     }
@@ -99,14 +88,49 @@ const SignUpPage = () => {
   };
 
   const validateInputs = () => {
-    setFirstNameError(firstName ? false : true);
-    setLastNameError(lastName ? false : true);
-    setWorkEmailError(workEmail && validateEmail(workEmail) ? false : true);
-    setLinkedinError(linkedin && validateLinkedIn(linkedin) ? false : true);
-    setRefCodeError(validateRefCode(refCode) ? false : true);
-    setCountriesError(selectedCountry.id !== "0" ? false : true);
-    setAccTypeError(selectedAccountType.id !== "0" ? false : true);
-    setMRRError(mrr && mrr > 0 ? false : true);
+    let error = false;
+
+    if (!firstName) {
+      setFirstNameError(true);
+      error = true;
+    }
+
+    if (!lastName) {
+      setLastNameError(true);
+      error = true;
+    }
+
+    if (!linkedin && !validateLinkedIn(linkedin)) {
+      setLinkedinError(true);
+      error = true;
+    }
+
+    if (!workEmail && !validateEmail(workEmail)) {
+      setWorkEmailError(true);
+      error = true;
+    }
+
+    if (!validateRefCode(refCode)) {
+      setRefCodeError(true);
+      error = true;
+    }
+
+    if (selectedCountry.id === "0") {
+      setCountriesError(true);
+      error = true;
+    }
+
+    if (selectedAccountType.id === "0") {
+      setAccTypeError(true);
+      error = true;
+    }
+
+    if (!mrr && mrr <= 0) {
+      setMRRError(true);
+      error = true;
+    }
+
+    return error;
   };
 
   function validateEmail(email) {
