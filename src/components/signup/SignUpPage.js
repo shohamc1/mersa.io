@@ -85,7 +85,7 @@ const SignUpPage = () => {
       .then((res) => {
         console.log(res);
         if (res.data["error"]) {
-          setFormError(res.data);
+          setFormError(res.data.error);
           setLoading(false);
         } else {
           setSuccess(res.data.refCode);
@@ -103,7 +103,7 @@ const SignUpPage = () => {
     setLastNameError(lastName ? false : true);
     setWorkEmailError(workEmail && validateEmail(workEmail) ? false : true);
     setLinkedinError(linkedin && validateLinkedIn(linkedin) ? false : true);
-    setRefCodeError(refCode && validateRefCode(refCode) ? false : true);
+    setRefCodeError(validateRefCode(refCode) ? false : true);
     setCountriesError(selectedCountry.id !== "0" ? false : true);
     setAccTypeError(selectedAccountType.id !== "0" ? false : true);
     setMRRError(mrr && mrr > 0 ? false : true);
@@ -121,6 +121,7 @@ const SignUpPage = () => {
   }
 
   function validateRefCode(refCode) {
+    if (!refCode) return true;
     return refCode.length === 10 || refCode.length === 0 ? true : false;
   }
 
