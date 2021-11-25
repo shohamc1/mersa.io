@@ -134,8 +134,7 @@ const SignUpPage = () => {
   };
 
   function validateEmail(email) {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
 
@@ -156,7 +155,7 @@ const SignUpPage = () => {
   if (success) {
     return (
       <div class="flex flex-col justify-center items-center text-white mt-4">
-        <div class="text-5xl font-header tracking-wider mb-8">
+        <div class="text-3xl lg:text-5xl text-center font-header tracking-wider mb-8">
           You're all set!
         </div>
 
@@ -222,12 +221,12 @@ const SignUpPage = () => {
 
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
-      <div class="text-5xl font-header tracking-wider mb-8">
+      <div class="text-3xl lg:text-5xl font-header tracking-wider mb-4 lg:mb-8">
         Sign up for early access
       </div>
 
-      <div class="flex flex-col backdrop-blur-100 bg-white bg-opacity-10 p-8 rounded-xl space-y-4">
-        <div class="flex flex-row space-x-12">
+      <div class="flex flex-col backdrop-blur-100 bg-white bg-opacity-10 w-full lg:w-auto p-4 lg:p-8 rounded-xl space-y-4">
+        <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-12">
           {/* Row 1 */}
           <div class="flex flex-col">
             <div class="flex flex-row">
@@ -240,6 +239,7 @@ const SignUpPage = () => {
               placeholder="Jane"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              autoComplete="given-name"
             />
             {firstNameError ? (
               <span class="text-xs text-red-500 pt-1 px-1">
@@ -260,6 +260,7 @@ const SignUpPage = () => {
               placeholder="Doe"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              autoComplete="family-name"
             />
             {lastNameError ? (
               <span class="text-xs text-red-500 pt-1 px-1">
@@ -283,6 +284,7 @@ const SignUpPage = () => {
             placeholder="hello@mersa.io"
             value={workEmail}
             onChange={(e) => setWorkEmail(e.target.value)}
+            autoComplete="email"
           />
           {workEmailError ? (
             <span class="text-xs text-red-500 pt-1 px-1">
