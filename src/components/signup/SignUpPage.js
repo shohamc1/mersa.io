@@ -206,7 +206,10 @@ const SignUpPage = () => {
         <div class="flex flex-row space-x-12">
           {/* Row 1 */}
           <div class="flex flex-col">
-            <span class="font-light text-sm text-lightWhite">First Name</span>
+            <div class="flex flex-row">
+              <span class="font-light text-sm text-lightWhite">First Name</span>
+              <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+            </div>
             <input
               type="text"
               class="px-4 py-2 border-2 border-black bg-backgroundGray rounded-md"
@@ -223,7 +226,10 @@ const SignUpPage = () => {
             )}
           </div>
           <div class="flex flex-col">
-            <span class="font-light text-sm text-lightWhite">Last Name</span>
+            <div class="flex flex-row">
+              <span class="font-light text-sm text-lightWhite">Last Name</span>
+              <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+            </div>
             <input
               type="text"
               class="px-4 py-2 border-2 border-black bg-backgroundGray rounded-md"
@@ -243,7 +249,10 @@ const SignUpPage = () => {
 
         <div class="flex flex-col">
           {/* Row 2 */}
-          <span class="font-light text-sm text-lightWhite">Work Email</span>
+          <div class="flex flex-row">
+            <span class="font-light text-sm text-lightWhite">Work Email</span>
+            <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+          </div>
           <input
             type="email"
             class="px-4 py-2 border-2 border-black bg-backgroundGray rounded-md"
@@ -262,9 +271,12 @@ const SignUpPage = () => {
 
         <div class="flex flex-col">
           {/* Row 3 */}
-          <span class="font-light text-sm text-lightWhite">
-            LinkedIn Profile
-          </span>
+          <div class="flex flex-row">
+            <span class="font-light text-sm text-lightWhite">
+              LinkedIn Profile
+            </span>
+            <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+          </div>
           <input
             type="email"
             class="px-4 py-2 border-2 border-black bg-backgroundGray rounded-md"
@@ -283,7 +295,10 @@ const SignUpPage = () => {
 
         <div class="flex flex-col">
           {/* Row 4 */}
-          <span class="font-light text-sm text-lightWhite">Country</span>
+          <div class="flex flex-row">
+            <span class="font-light text-sm text-lightWhite">Country</span>
+            <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+          </div>
           <Listbox value={selectedCountry} onChange={setSelectedCountry}>
             <div className="relative mt-1">
               <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left border-2 border-black bg-backgroundGray rounded-md">
@@ -371,7 +386,10 @@ const SignUpPage = () => {
 
         <div class="flex flex-col">
           {/* Row 6 */}
-          <span class="font-light text-sm text-lightWhite">I am a</span>
+          <div class="flex flex-row">
+            <span class="font-light text-sm text-lightWhite">I am a</span>
+            <div class="rounded-full bg-red-500 w-1 h-1 self-center ml-1"></div>
+          </div>
           <Listbox
             value={selectedAccountType}
             onChange={setSelectedAccountType}
