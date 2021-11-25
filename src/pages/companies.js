@@ -10,6 +10,7 @@ const Companies = () => {
     <div class="flex w-full h-full justify-center bg-backgroundGray">
       <Helmet>
         <title>For companies | mersa.io</title>
+        <meta name="theme-color" content="#382051"></meta>
       </Helmet>
       <div class="absolute top-0 left-0 h-full w-full opacity-30 bg-gradient-to-b from-companiesRed to-backgroundGray"></div>
       <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">

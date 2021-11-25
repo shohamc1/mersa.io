@@ -10,6 +10,7 @@ const Index = () => {
     <div class="flex w-full h-full justify-center bg-backgroundGray">
       <Helmet>
         <title>mersa.io</title>
+        <meta name="theme-color" content="#143A61"></meta>
       </Helmet>
       <div class="absolute top-0 left-0 w-full h-full opacity-30 bg-gradient-to-b from-landingBlue to-backgroundGray"></div>
       <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">

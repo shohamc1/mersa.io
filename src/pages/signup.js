@@ -10,6 +10,7 @@ const SignUp = () => {
     <div class="flex w-full h-full min-h-screen justify-center bg-backgroundGray">
       <Helmet>
         <title>Sign Up | mersa.io</title>
+        <meta name="theme-color" content="#142728"></meta>
       </Helmet>
       <div class="absolute top-0 left-0 h-full w-full min-h-screen opacity-30 bg-gradient-to-b from-signUpOlive to-backgroundGray"></div>
       <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">
