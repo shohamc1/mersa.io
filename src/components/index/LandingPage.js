@@ -1,58 +1,61 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import Image from "../../images/0001.jpg";
+
 const LandingPage = () => {
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
-      <div class="text-5xl text-center lg:text-7xl font-header tracking-wider">
-        Financing{" "}
-        <span class="w-min md:w-max lg:w-max thickunderline">
-          without Fundraising
-        </span>
-      </div>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        Turn your recurring revenue into growth financing
-      </span>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        with three easy steps
-      </span>
-
-      <div class="flex flex-col my-2 space-y-2 text-center">
-        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
-          Connect.
-        </span>
-        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
-          Select.
-        </span>
-        <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
-          Collect.
-        </span>
-      </div>
-
-      <span class="font-header text-xl lg:text-2xl text-center tracking-wide">
-        Mersa allows you to turn your predictable recurring revenues into years
-        of upfront capital in less than 24 hours.
-      </span>
-
-      <span class="text-xl lg:text-2xl thickunderline-small">
-        No dilution. No debt.
-      </span>
-      <div class="my-4 px-4 py-2 border-4 border-borderGreen rounded-md">
-        Instant Financing.
-      </div>
-
-      <div class="mb-4 grid grid-flow-row lg:grid-flow-col grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4">
-        <Link to="/signup">
-          <div class="py-4 px-2 lg:py-8 lg:px-12 bg-white text-black font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
-            Sign Up for Early Access
+      <div class="grid grid-flow-row h-screen items-center">
+        <div class="text-center">
+          <div class="text-5xl text-center lg:text-7xl font-header tracking-wider">
+            Financing{" "}
+            <span class="w-min md:w-max lg:w-max thickunderline">
+              without Fundraising
+            </span>
           </div>
-        </Link>
+          <span class="text-xl lg:text-2xl text-center">
+            Mersa empowers founders to grow their businesses with their
+            revenues. Retain a larger share of your company at exit.
+          </span>
+        </div>
 
-        <a href="/">
-          <div class="py-4 px-2 lg:py-8 lg:px-12 bg-buttonGray text-white font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
-            Contact Us
+        <div>
+          <div class="flex flex-col my-2 space-y-4 text-center">
+            <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
+              Connect.
+            </span>
+            <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
+              Select.
+            </span>
+            <span class="font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
+              Collect.
+            </span>
           </div>
-        </a>
+        </div>
+
+        <div class="grid grid-flow-row text-center mb-2">
+          <div class="mb-4">
+            <span class="text-xl lg:text-2xl">No dilution. No debt.</span>
+            <div class="text-xl lg:text-2xl rounded-md font-semibold">
+              Instant Financing.
+            </div>
+          </div>
+
+          <div class="mb-4 grid grid-flow-row lg:grid-flow-col grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4">
+            <Link to="/signup">
+              <div class="py-4 px-2 lg:py-8 lg:px-12 bg-white text-black font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
+                Sign Up for Early Access
+              </div>
+            </Link>
+
+            <a href="/">
+              <div class="py-4 px-2 lg:py-8 lg:px-12 bg-buttonGray text-white font-subheader font-extrabold lg:text-2xl rounded-lg text-center">
+                Contact Us
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
 
       <span class="font-header text-xl lg:text-2xl text-center tracking-wider">
@@ -62,51 +65,58 @@ const LandingPage = () => {
         Retain a larger share of your company at exit.
       </span>
 
-      {/* Connect */}
-      <div class="mt-4 font-header bg-gradient-to-r from-connectDarkBlue to-connectLightBlue w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
-        1
-      </div>
-      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
-        Connect.
-      </span>
-
-      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
-        <div class="text-2xl p-4 lg:p-12">
-          Connect your existing systems to Mersa. It only takes <b>5 minutes</b>
-          .
+      <div class="flex flex-col h-screen justify-center items-center">
+        {/* Connect */}
+        <div class="mt-4 font-header bg-gradient-to-r from-connectDarkBlue to-connectLightBlue w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
+          1
         </div>
-        <div class="bg-white">Image</div>
-      </div>
+        <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
+          Connect.
+        </span>
 
-      {/* Select */}
-      <div class="mt-4 font-header bg-gradient-to-r from-selectPurple to-selectRed w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
-        2
-      </div>
-      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
-        Select.
-      </span>
+        <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
+          <div class="text-2xl p-4 lg:p-12 self-center">
+            Connect your existing systems to Mersa. It only takes{" "}
+            <b>5 minutes</b>.
+          </div>
 
-      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
-        <div class="bg-white">Image</div>
-        <div class="col-start-1 lg:col-start-auto text-2xl p-4 lg:p-12">
-          Select the contracts you would like to sell as bonds to investors.
+          <img class="p-16" src={Image} />
         </div>
       </div>
 
-      {/* Collect */}
-      <div class="mt-4 font-header bg-gradient-to-r from-collectOrange to-collectYellow w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full  text-2xl lg:text-4xl">
-        3
-      </div>
-      <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
-        Collect.
-      </span>
-
-      <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
-        <div class="text-2xl p-4 lg:p-12">
-          Collect your upfront capital. It's as if each contract paid you
-          upfront for 1-3 years worth of subscriptions.
+      <div class="flex flex-col h-screen justify-center items-center">
+        {/* Select */}
+        <div class="mt-4 font-header bg-gradient-to-r from-selectPurple to-selectRed w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
+          2
         </div>
-        <div class="bg-white">Image</div>
+        <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
+          Select.
+        </span>
+
+        <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
+          <div class="bg-white">Image</div>
+          <div class="col-start-1 lg:col-start-auto text-2xl p-4 lg:p-12">
+            Select the contracts you would like to sell as bonds to investors.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col h-screen justify-center items-center">
+        {/* Collect */}
+        <div class="mt-4 font-header bg-gradient-to-r from-collectOrange to-collectYellow w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full  text-2xl lg:text-4xl">
+          3
+        </div>
+        <span class="font-extrabold text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
+          Collect.
+        </span>
+
+        <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
+          <div class="text-2xl p-4 lg:p-12">
+            Collect your upfront capital. It's as if each contract paid you
+            upfront for 1-3 years worth of subscriptions.
+          </div>
+          <div class="bg-white">Image</div>
+        </div>
       </div>
 
       <span class="my-4 font-header text-3xl lg:text-5xl text-center tracking-wider">
