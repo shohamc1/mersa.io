@@ -6,7 +6,7 @@ import Image from "../../images/0001.jpg";
 const LandingPage = () => {
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
-      <div class="grid grid-flow-row h-screen items-center">
+      <div class="grid grid-flow-row h-screen min-h-full items-center">
         <div class="text-center">
           <div class="text-5xl text-center lg:text-7xl font-header tracking-wider">
             Financing{" "}
