@@ -54,7 +54,7 @@ const InvestorsPage = () => {
 
         <div class="lg:p-8">
           <img
-            src={InvestorsConnect}
+            src={InvestorsSelect}
             alt="How it works"
             class="rounded-2xl self-center"
           />
@@ -64,7 +64,7 @@ const InvestorsPage = () => {
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
         <div class="lg:p-8">
           <img
-            src={InvestorsSelect}
+            src={InvestorsConnect}
             alt="How it works"
             class="rounded-2xl self-center"
           />
