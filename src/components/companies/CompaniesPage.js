@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import ComapanyFirst from "../../images/company_first.webp";
+import CompanyCSC from "../../images/company_csc.webp";
+
 const CompaniesPage = () => {
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
@@ -10,15 +13,13 @@ const CompaniesPage = () => {
           without dilution
         </span>
       </div>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        Convert your predictable monthly recurring revenues
-      </span>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        into instant, upfront growth capital.
+      <span class="text-xl lg:text-2xl text-center">
+        Convert your predictable monthly recurring revenues into instant,
+        upfront growth capital.
       </span>
 
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
-        <div class="flex flex-col mx-2">
+        <div class="flex flex-col mx-2 self-center text-center lg:text-left">
           <span class="text-2xl lg:text-4xl font-bold">
             Skip your next round of fundraising.
           </span>
@@ -38,13 +39,25 @@ const CompaniesPage = () => {
           </span>
         </div>
 
-        <div class="bg-white">Image</div>
+        <div class="lg:p-8">
+          <img
+            src={ComapanyFirst}
+            alt="How it works"
+            class="rounded-2xl self-center"
+          />
+        </div>
       </div>
 
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
-        <div class="bg-white mr-2">Image</div>
+        <div class="mr-2 lg:p-8">
+          <img
+            src={CompanyCSC}
+            alt="How it works"
+            class="rounded-2xl self-center"
+          />
+        </div>
 
-        <div class="col-start-1 lg:col-start-auto flex flex-col lg:text-right mx-2">
+        <div class="col-start-1 lg:col-start-auto flex flex-col mx-2 self-center text-center lg:text-right">
           <span class="text-2xl lg:text-4xl font-bold">
             It's as easy as 1, 2, 3.
           </span>
@@ -72,11 +85,11 @@ const CompaniesPage = () => {
       </div>
 
       <div class="my-8 flex flex-col text-center">
-        <span class="text-2xl lg:text-4xl font-bold">
+        <span class="text-2xl lg:text-4xl font-light">
           Get anywhere from 1 to 3 years worth of capital upfront.
         </span>
-        <span class="text-lg lg:text-2xl">
-          Extend your runway. Increase your valuation
+        <span class="text-2xl lg:text-4xl">
+          Extend your runway. Increase your valuation.
         </span>
       </div>
 

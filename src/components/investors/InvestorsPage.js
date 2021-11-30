@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import InvestorsConnect from "../../images/investors_connect.webp";
+import InvestorsCollect from "../../images/investors_select.webp";
+import InvestorsSelect from "../../images/investors_collect.webp";
+
 const InvestorsPage = () => {
   return (
     <div class="flex flex-col justify-center items-center text-white mt-4">
@@ -11,11 +15,8 @@ const InvestorsPage = () => {
         </span>{" "}
         asset class
       </div>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        Invest in recurring revenue contracts
-      </span>
-      <span class="font-subheader text-xl lg:text-4xl text-center">
-        with monthly returns.
+      <span class="text-2xl lg:text-4xl text-center">
+        Invest in recurring revenue contracts with monthly returns.
       </span>
 
       <div class="my-8">
@@ -27,7 +28,7 @@ const InvestorsPage = () => {
             hottest companies.
           </span>
         </div>
-        <div class="flex flex-col text-center text-lg lg:text-2xl">
+        <div class="flex flex-col text-center text-lg lg:text-2xl mt-2">
           <span>Select which companies' contracts you want to buy.</span>
           <span>
             Place your competitive bid and collect your monthly return on
@@ -37,63 +38,81 @@ const InvestorsPage = () => {
       </div>
 
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
-        <div class="flex flex-col mx-2 text-center lg:text-left">
+        <div class="flex flex-col mx-2 text-center lg:text-left self-center">
           <div>
             <span class="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-connectDarkBlue to-connectLightBlue">
               Connect.
             </span>
           </div>
-          <span class="text-lg lg:text-2xl mt-4 lg:mt-8">
+          <span class="text-2xl lg:text-4xl mt-4 lg:mt-8">
             Connect your bank account.
           </span>
-          <span class="text-lg lg:text-2xl">
+          <span class="text-2xl lg:text-4xl">
             Just like any other brokerage account.
           </span>
         </div>
 
-        <div class="bg-white">Image</div>
+        <div class="lg:p-8">
+          <img
+            src={InvestorsConnect}
+            alt="How it works"
+            class="rounded-2xl self-center"
+          />
+        </div>
       </div>
 
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
-        <div class="bg-white">Image</div>
+        <div class="lg:p-8">
+          <img
+            src={InvestorsSelect}
+            alt="How it works"
+            class="rounded-2xl self-center"
+          />
+        </div>
 
-        <div class="col-start-1 lg:col-start-auto flex flex-col mx-2 text-center lg:text-right">
+        <div class="col-start-1 lg:col-start-auto flex flex-col mx-2 text-center lg:text-right self-center">
           <div>
             <span class="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-selectPurple to-selectRed">
               Select.
             </span>
           </div>
-          <span class="text-lg lg:text-2xl mt-4 lg:mt-8">
+          <span class="text-2xl lg:text-4xl mt-4 lg:mt-8">
             Select which contracts you want to buy.
           </span>
-          <span class="text-lg lg:text-2xl">Place your bid.</span>
+          <span class="text-2xl lg:text-4xl">Place your bid.</span>
         </div>
       </div>
 
       <div class="my-8 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 space-y-1 lg:space-y-0 lg:space-x-4 w-full">
-        <div class="flex flex-col mx-2 text-center lg:text-left">
+        <div class="flex flex-col mx-2 text-center lg:text-left self-center">
           <div>
             <span class="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-collectOrange to-collectYellow">
               Collect.
             </span>
           </div>
-          <span class="text-lg lg:text-2xl mt-4 lg:mt-8">
+          <span class="text-2xl lg:text-4xl mt-4 lg:mt-8">
             Collect your monthly return.
           </span>
-          <span class="text-lg lg:text-2xl mt-1">
+          <span class="text-2xl lg:text-4xl mt-1">
             We'll make sure the monthly payouts hit your bank account. All you
             need to do is track your portfolio's performance.
           </span>
         </div>
 
-        <div class="bg-white">Image</div>
+        <div class="lg:p-8">
+          <img
+            src={InvestorsCollect}
+            alt="How it works"
+            class="rounded-2xl self-center"
+          />
+        </div>
       </div>
 
       <div class="my-8 flex flex-col text-center">
         <span class="text-2xl lg:text-4xl font-bold">
           Safety of bonds, returns of equities.
         </span>
-        <span class="text-lg lg:text-2xl">
+        <span class="text-lg lg:text-2xl mt-2">
           You never lose money on your investment.
         </span>
         <span class="text-lg lg:text-2xl">

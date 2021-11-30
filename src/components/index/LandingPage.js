@@ -64,7 +64,7 @@ const LandingPage = () => {
         </span>
 
         <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
-          <div class="text-2xl lg:text-4xl p-4 lg:p-12 self-center">
+          <div class="text-2xl lg:text-4xl text-center lg:text-left p-4 lg:p-12 self-center">
             Connect your existing systems to Mersa. It only takes{" "}
             <b>5 minutes</b>.
           </div>
@@ -95,7 +95,7 @@ const LandingPage = () => {
               class="rounded-2xl self-center"
             />
           </div>
-          <div class="col-start-1 lg:col-start-auto text-2xl lg:text-4xl p-4 lg:p-12 self-center">
+          <div class="col-start-1 lg:col-start-auto text-2xl lg:text-4xl text-center lg:text-right p-4 lg:p-12 self-center">
             Select the contracts you would like to sell as bonds to investors.
           </div>
         </div>
@@ -111,7 +111,7 @@ const LandingPage = () => {
         </span>
 
         <div class="my-4 grid grid-flow-col lg:grid-flow-row grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:space-x-4">
-          <div class="text-2xl lg:text-4xl p-4 lg:p-12 self-center">
+          <div class="text-2xl lg:text-4xl p-4 lg:p-12 text-center lg:text-left self-center">
             Collect your upfront capital. It's as if each contract paid you
             upfront for 1-3 years worth of subscriptions.
           </div>
