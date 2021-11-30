@@ -26,7 +26,7 @@ const LandingPage = () => {
         <img
           src={LandingGraphic}
           alt="How it works"
-          class="lg:w-2/3 self-center"
+          class="lg:w-2/3 self-center rounded-2xl"
         />
       </div>
 
