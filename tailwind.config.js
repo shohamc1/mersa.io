@@ -32,6 +32,9 @@ module.exports = {
       transitionProperty: {
         height: "height",
       },
+      height: {
+        sscreen: "67vh",
+      },
     },
     letterSpacing: {
       wide: "0.02em",
