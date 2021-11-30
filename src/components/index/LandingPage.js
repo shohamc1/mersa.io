@@ -55,7 +55,7 @@ const LandingPage = () => {
       </div>
 
       {/* Connect */}
-      <div class="lg:h-sscreen flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center lg:mt-24 lg:mb-24">
         <div class="mt-4 font-header bg-gradient-to-r from-connectDarkBlue to-connectLightBlue w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
           1
         </div>
@@ -78,7 +78,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center lg:mb-24">
         {/* Select */}
         <div class="mt-4 font-header bg-gradient-to-r from-selectPurple to-selectRed w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full text-2xl lg:text-4xl">
           2
@@ -101,7 +101,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div class="lg:h-sscreen flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center lg:mb-24">
         {/* Collect */}
         <div class="mt-4 font-header bg-gradient-to-r from-collectOrange to-collectYellow w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center rounded-full  text-2xl lg:text-4xl">
           3

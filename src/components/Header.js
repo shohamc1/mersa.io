@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
-import logo from "../images/mersa_no_bg.png";
+import logo from "../images/mersa_no_bg.webp";
 
 const Header = () => {
   return (

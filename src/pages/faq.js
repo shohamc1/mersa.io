@@ -13,7 +13,7 @@ const Companies = () => {
         <meta name="theme-color" content="#61143B"></meta>
       </Helmet>
       <div class="absolute top-0 left-0 h-full w-full min-h-screen opacity-30 bg-gradient-to-b from-faqPink to-backgroundGray"></div>
-      <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">
+      <main class="w-full px-4 2xl:px-0 2xl:w-3/4 z-10">
         <Header />
         <FAQPage />
         <Footer />

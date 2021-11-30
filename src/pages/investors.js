@@ -13,7 +13,7 @@ const Investors = () => {
         <meta name="theme-color" content="#382051"></meta>
       </Helmet>
       <div class="absolute top-0 left-0 h-full w-full opacity-30 bg-gradient-to-b from-investorsPurple to-backgroundGray"></div>
-      <main class="w-full px-4 lg:px-0 lg:w-3/4 z-10">
+      <main class="w-full px-4 2xl:px-0 2xl:w-3/4 z-10">
         <Header />
         <InvestorsPage />
         <Footer />

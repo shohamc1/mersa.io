@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../images/mersa_no_bg.png";
+import logo from "../images/mersa_no_bg.webp";
 
 const Footer = () => {
   return (
