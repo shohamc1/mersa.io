@@ -24,7 +24,7 @@ module.exports = {
         short_name: "mersa.io",
         start_url: "/",
         display: "standalone",
-        icon: "./src/images/mersa_icon.png",
+        icon: "./src/images/mersa_icon.webp",
       },
     },
     "gatsby-transformer-sharp",
